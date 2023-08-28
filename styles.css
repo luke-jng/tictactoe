@@ -1,0 +1,172 @@
+/* html, body {
+    height: 100%;
+} */
+
+
+body {
+    background-color: rgb(10, 10, 42);
+}
+
+h1, h2 , h3, #current_turn{
+    text-align: center;
+    color:  rgb(228, 222, 255);
+}
+
+h2 {
+    text-decoration-line: underline;
+}
+
+#page_container {
+    background-color: rgb(100, 71, 228);
+    border-radius: 13px;
+    text-align: center;
+    width: 600px;
+    margin: auto;
+    padding: 50px 15px;
+}
+
+/*child element's attributes of the same name as attributes in parent element overwrite the paren'ts attribute value when it comes to the behavior specific to child element*/
+/* #namecreation_container {
+    text-align: left;
+} */
+
+#score_table {
+    margin: 0 auto;
+    background-color:rgb(248, 240, 255);
+}
+
+table, th, td {
+    border: 1px solid purple;
+}
+
+th {
+    padding: 5px;
+}
+
+#p1_score_name, #p2_score_name {
+    text-align: left;
+}
+
+
+#current_turn {
+    font-weight: bold;
+}
+
+
+.game_container {
+    /* display: flex;
+    align-items: center;
+    align-content: center;
+    text-align: center; */
+}
+
+#name_form {
+    display: inline-block;
+}
+
+
+.game_board {
+    display: inline-grid; 
+    /*display: inline-grid allows grid to be centered according to parent container's attributes */
+    /*display: grid does not*/ 
+    height: 300px;
+    width: 300px;
+    font-size: 75px;
+    background-color: lightblue;
+    margin: 20px 0;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+    grid-template-areas:
+        "tile_11 tile_12 tile_13"
+        "tile_21 tile_22 tile_23"
+        "tile_31 tile_32 tile_33"
+}
+
+.tile {
+    /* background-color: blue; */
+    border: 1px solid black;
+    font-size: 100%;
+}
+
+/* .tile:hover {
+    background-color: lightgreen;
+} */
+
+#tile_11 {
+    grid-area: tile_11;
+}
+
+#tile_12 {
+    grid-area: tile_12;
+}
+
+#tile_13 {
+    grid-area: tile_13;
+}
+
+#tile_21 {
+    grid-area: tile_21;
+}
+
+#tile_22 {
+    grid-area: tile_22;
+}
+
+#tile_23 {
+    grid-area: tile_23;
+}
+
+#tile_31 {
+    grid-area: tile_31;
+}
+
+#tile_32 {
+    grid-area: tile_32;
+}
+
+#tile_33 {
+    grid-area: tile_33;
+}
+
+button {
+    background-color: rgb(218, 181, 243);
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    color: rgb(228, 222, 255);
+    background-color: rgb(100, 71, 228);
+    text-align: center;
+}
+
+a {
+    color:  rgb(249, 136, 225);
+}
+
+
+#victory_modal, #victory2_modal {
+    padding: 100px;
+    background-color: rgb(129, 102, 249);
+    border-radius: 35px;
+    /* border-color: rgb(211, 174, 247); */
+    border: none;
+}
+
+#modal_content, #modal_content2 {
+    color: rgb(228, 222, 255);
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+dialog::backdrop {
+    background-color: hsl(269, 76%, 9%, 0.5);
+}
+
+#error_info {
+    color: red;
+}
